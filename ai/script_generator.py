@@ -11,9 +11,9 @@ import os
 from datetime import datetime
 from typing import Optional
 
-from src.ai.llm_client import LLMClient
-from src.db.database import db_manager
-from src.db.models import AutomationScript, DetectedPattern
+from ai.llm_client import LLMClient
+from db.database import db_manager
+from db.models import AutomationScript, DetectedPattern
 from config import Config
 
 logger = logging.getLogger(__name__)
@@ -334,7 +334,7 @@ logger = logging.getLogger(__name__)
                 script_id = script.id
 
             # Update pattern status to 'ready'
-            from src.core.pattern_miner import PatternMiner
+            from core.pattern_miner import PatternMiner
             miner = PatternMiner()
             miner.update_pattern_status(pattern_hash, "ready")
 

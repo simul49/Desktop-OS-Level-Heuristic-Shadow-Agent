@@ -23,10 +23,10 @@ except ImportError:
 
 from pynput import mouse, keyboard
 
-from src.core.privacy import PrivacyFilter
-from src.core.ocr_engine import OCREngine
-from src.db.database import db_manager
-from src.db.models import RawEvent
+from core.privacy import PrivacyFilter
+from core.ocr_engine import OCREngine
+from db.database import db_manager
+from db.models import RawEvent
 from config import Config
 
 logger = logging.getLogger(__name__)

@@ -19,7 +19,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from config import Config
-from src.db.database import db_manager
+from db.database import db_manager
 
 
 def setup_logging(level: int = logging.INFO) -> None:
@@ -74,9 +74,9 @@ def run_headless() -> None:
     logger = logging.getLogger(__name__)
     logger.info("Starting Heuristic Shadow in headless mode...")
 
-    from src.core.listener import OSEventListener
-    from src.core.pattern_miner import PatternMiner
-    from src.ai.script_generator import ScriptGenerator
+    from core.listener import OSEventListener
+    from core.pattern_miner import PatternMiner
+    from ai.script_generator import ScriptGenerator
 
     listener = OSEventListener()
     miner = PatternMiner()
@@ -105,8 +105,8 @@ def run_mine_only() -> None:
     logger = logging.getLogger(__name__)
     logger.info("Running pattern mining (one-shot)...")
 
-    from src.core.pattern_miner import PatternMiner
-    from src.ai.script_generator import ScriptGenerator
+    from core.pattern_miner import PatternMiner
+    from ai.script_generator import ScriptGenerator
 
     miner = PatternMiner()
     script_gen = ScriptGenerator()
@@ -166,7 +166,7 @@ def run_health_check() -> None:
     # 2. AI Providers
     print("\n[2/4] AI Provider Health...")
     try:
-        from src.ai.llm_client import LLMClient
+        from ai.llm_client import LLMClient
         llm = LLMClient()
         results = llm.health_check()
         for provider, result in results.items():
@@ -180,7 +180,7 @@ def run_health_check() -> None:
     # 3. OCR Engine
     print("\n[3/4] OCR Engine...")
     try:
-        from src.core.ocr_engine import OCREngine
+        from core.ocr_engine import OCREngine
         ocr = OCREngine()
         status = ocr.get_status()
         print(f"  Ready: {status['ready']}")
@@ -222,7 +222,7 @@ def run_gui() -> int:
     logger = logging.getLogger(__name__)
     logger.info("Starting Heuristic Shadow with GUI...")
 
-    from src.ui.tray import TrayApplication
+    from ui.tray import TrayApplication
 
     app = TrayApplication()
     return app.run()

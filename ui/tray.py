@@ -18,10 +18,10 @@ from PySide6.QtCore import QTimer, Qt, Signal, QObject
 from PySide6.QtGui import QIcon, QAction, QFont
 
 from config import Config
-from src.core.listener import OSEventListener
-from src.core.pattern_miner import PatternMiner
-from src.ai.script_generator import ScriptGenerator
-from src.sandbox.executor import SandboxExecutor
+from core.listener import OSEventListener
+from core.pattern_miner import PatternMiner
+from ai.script_generator import ScriptGenerator
+from sandbox.executor import SandboxExecutor
 
 logger = logging.getLogger(__name__)
 
