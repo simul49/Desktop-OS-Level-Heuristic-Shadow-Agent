@@ -13,7 +13,9 @@ sqlalchemy>=2.0.20
 pymysql>=1.1.0
 cryptography>=41.0.0
 
-# AI / LLM Clients
+# AI / LLM Clients (DeepSeek, Qwen, Hunyuan — all use OpenAI-compatible API format)
+# The 'openai' package is used as HTTP client only, NOT calling OpenAI servers.
+# Requests go to: api.deepseek.com / dashscope.aliyuncs.com / api.hunyuan.cloud.tencent.com
 openai>=1.6.0
 httpx>=0.25.0
 
