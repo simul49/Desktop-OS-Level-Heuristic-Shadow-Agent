@@ -17,8 +17,8 @@ from datetime import datetime, timedelta
 from typing import Optional
 
 from config import Config
-from db.database import db_manager
-from db.models import RawEvent, DetectedPattern
+from src.db.database import db_manager
+from src.db.models import RawEvent, DetectedPattern
 
 logger = logging.getLogger(__name__)
 

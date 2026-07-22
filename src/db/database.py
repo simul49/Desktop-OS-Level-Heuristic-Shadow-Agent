@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import OperationalError, SQLAlchemyError
 
 from config import Config
-from db.models import Base
+from src.db.models import Base
 
 logger = logging.getLogger(__name__)
 

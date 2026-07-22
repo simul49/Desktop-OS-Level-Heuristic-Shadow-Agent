@@ -15,8 +15,8 @@ import time
 from typing import Optional
 
 from config import Config
-from db.database import db_manager
-from db.models import AutomationScript
+from src.db.database import db_manager
+from src.db.models import AutomationScript
 
 logger = logging.getLogger(__name__)
 

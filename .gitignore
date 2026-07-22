@@ -37,7 +37,4 @@ Thumbs.db
 # PRD (excluded from repo)
 Heuristic_Shadow_Agent_PRD.md
 
-# CodeBuddy memory (local only)
-.codebuddy/memory/
-
 # MySQL (don't commit connection test files)
